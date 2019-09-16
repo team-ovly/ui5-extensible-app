@@ -42,11 +42,11 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-      "path": "/sap/opu/odata",
+      "path": "/sap/",
       "target": {
         "type": "destination",
         "name": "OVLY_S4",
-        "entryPath": "/sap/opu/odata"
+        "entryPath": "/sap/"
       },
       "description": "OVLY - S4 1809"
     }
