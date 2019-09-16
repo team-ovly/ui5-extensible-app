@@ -1,0 +1,29 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ovly.extensible.controller.S1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="page" title="{i18n>s1_title}">
+		<content>
+			<ObjectHeader id="header" intro="This is the" title="Original App"/>
+			<core:ExtensionPoint name="extContentAfterHeader"/>
+			<List items="{/Products}" growing="true" growingThreshold="20" itemPress="onItemPress">
+				<items>
+					<ObjectListItem type="Navigation" intro="{Id}" title="{Name}" number="{Price}" numberUnit="U$">
+						<attributes>
+							<core:ExtensionPoint name="extListItemAttibutes">
+								<ObjectAttribute title="{i18n>category}" text="{MainCategoryName}"/>
+							</core:ExtensionPoint>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<core:ExtensionPoint name="extFooter"/>
+					<Button press="onAdd" icon="sap-icon://add" visible="{/addButtonVisible}"/>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
